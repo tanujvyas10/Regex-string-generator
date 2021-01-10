@@ -59,6 +59,16 @@ const expandSet = function (regexToken) {
 };
 
 /**
+ * Convert unicode to character 
+ */
+
+
+ const unicodeToChar = function(unicode){
+   return String.fromCharCode(unicode);
+ }
+
+
+/**
  * Regex string generator function
  */
 
@@ -93,10 +103,11 @@ const generator = function (regexTokens) {
       if (!extendedSet.length) {
         return "";
       }
-      return String.fromCharCode(randomSelect(extendedSet));
+      
+      return unicodeToChar(randomSelect(extendedSet));
 
     case types.CHAR:
-      return String.fromCharCode(regexTokens.value);
+      return unicodeToChar(regexTokens.value);
 
     case types.REPETITION:
       strRes = "";
