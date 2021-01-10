@@ -6,9 +6,10 @@ This is a regex string generator that takes a regular expression and n (no of st
 * Nodejs (Backend framework)
 
 # Library used (npm)
+* expressjs
 * ret (Regular Expression Tokenizer)
 * Drange (For adding/subtracting sets of range of numbers.)
-
+* nodemon
 
 # How to start
 * Enter ```https://github.com/tanujvyas10/Regex-string-generator``` in your terminal
