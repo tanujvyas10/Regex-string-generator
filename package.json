@@ -1,0 +1,18 @@
+{
+  "name": "regex-string-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "author": "Tanuj Vyas",
+  "license": "ISC",
+  "dependencies": {
+    "drange": "^2.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "ret": "^0.3.2"
+  }
+}
