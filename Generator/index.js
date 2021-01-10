@@ -95,8 +95,6 @@ const generator = function (regexTokens) {
       }
       return String.fromCharCode(randomSelect(extendedSet));
 
-
-
     case types.CHAR:
       return String.fromCharCode(regexTokens.value);
 
@@ -104,7 +102,8 @@ const generator = function (regexTokens) {
       strRes = "";
 
       let tempMin = regexTokens.min;
-      let tempMax = regexTokens.max === Infinity ? tempMin + max : regexTokens.max;
+      let tempMax =
+        regexTokens.max === Infinity ? tempMin + max : regexTokens.max;
       let n = randomInteger(tempMin, tempMax);
 
       for (i = 0; i < n; i++) {
@@ -123,9 +122,9 @@ function Generate(regexp, n) {
   }
 
   let result = [];
-  let strLen = regexp.length    
-  if(regexp[0] === '/' && regexp[strLen-1] === '/')
-       regexp = regexp.substr(1,strLen-2);
+  let strLen = regexp.length;
+  if (regexp[0] === "/" && regexp[strLen - 1] === "/")
+    regexp = regexp.substr(1, strLen - 2);
 
   let regexTokens = ret(regexp);
   for (let i = 0; i < n; i++) {
