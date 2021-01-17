@@ -40,8 +40,7 @@ const notWhitespace = { type: types.SET, set: WHITESPACE, not: true };
 const anyChar = { type: types.SET, set: NOTANYCHAR, not: true };
 
 /**
- * Turns class into tokens
- * reads str until it encounters a ] not preceeded by a \
+ * class tokenization
  */
 const classTokenizer = function (str, regExpression) {
   let _a, _b, _c, _d, _e, _f, _g;
