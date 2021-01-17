@@ -7,7 +7,6 @@ This is a regex string generator that takes a regular expression and n (no of st
 
 # Dependencies (npm)
 * expressjs
-* ret (Regular Expression Tokenizer)
 * Drange (For adding/subtracting sets of range of numbers.)
 * nodemon
 
