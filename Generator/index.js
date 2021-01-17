@@ -1,5 +1,5 @@
 const DRange = require("drange");
-const tokenizer= require('./tokenizer')
+const tokenizer= require('./Tokenizer')
 const types = require('./types')
 /**
  *
