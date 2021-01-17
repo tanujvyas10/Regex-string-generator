@@ -13,7 +13,7 @@ const WORDS = [
   { type: types.CHAR, value: 95 },
   { type: types.RANGE, from: 97, to: 122 },
   { type: types.RANGE, from: 65, to: 90 },
-  { type: types.RANGE, from: 48, to: 57 },
+  { type: types.RANGE, from: 48, to: 57 }
 ];
 
 const WHITESPACE = [
