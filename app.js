@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
    */
 
   let n = 10;
-  let regexp = "/(1[0-2]|0[1-9])(:[0-5][0-9]){2} (A|P)M/"; //(1[0-2]|0[1-9])(:[0-5][0-9]){2} (A|P)M
+  let regexp = "/[-+]?[0-9]{1,16}[.][0-9]{1,6}/"; //(1[0-2]|0[1-9])(:[0-5][0-9]){2} (A|P)M
   const result = Generate(regexp, n);
   /** 
    * console.log("The generated strings are",result)
