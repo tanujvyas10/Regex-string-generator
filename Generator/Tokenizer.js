@@ -45,9 +45,9 @@ const anyChar = { type: types.SET, set: NOTANYCHAR, not: true };
  */
 const classTokenizer = function (str, regExpression) {
   let _a, _b, _c, _d, _e, _f, _g;
-  let tokens = [],
-    result,
-    c;
+  let character;
+  let tokens = [],result;
+  
   let regexp = /\\(?:(w)|(d)|(s)|(W)|(D)|(S))|((?:(?:\\)(.)|([^\]\\]))-(((?:\\)])|(((?:\\)?([^\]])))))|(\])|(?:\\)?([^])/g;
   while ((result = regexp.exec(str)) !== null) {
     let p =
@@ -72,10 +72,10 @@ const classTokenizer = function (str, regExpression) {
           : result[7] && {
               type: types.RANGE,
               from: (result[8] || result[9]).charCodeAt(0),
-              to: (c = result[10]).charCodeAt(c.length - 1),
+              to: (character = result[10]).charCodeAt(character.length - 1),
             }) !== null && _g !== void 0
         ? _g
-        : (c = result[16]) && { type: types.CHAR, value: c.charCodeAt(0) };
+        : (character = result[16]) && { type: types.CHAR, value: character.charCodeAt(0) };
     if (p) {
       tokens.push(p);
     } else {
