@@ -1,6 +1,6 @@
-const ret = require("ret");
 const DRange = require("drange");
-const types = ret.types;
+const tokenizer= require('./Tokenizer')
+const types = require('./types')
 /**
  *
  * There can be a scenerio where the repetitional token has its max set to Infinite,
@@ -38,9 +38,9 @@ const randomSelect = function (arr) {
 
 const expandSet = function (regexToken) {
   switch (regexToken.type) {
-    case ret.types.CHAR:
+    case types.CHAR:
       return new DRange(regexToken.value);
-    case ret.types.RANGE:
+    case types.RANGE:
       return new DRange(regexToken.from, regexToken.to);
     default:
       let tempDRange = new DRange();
@@ -137,7 +137,7 @@ function Generate(regexp, n) {
   if (regexp[0] === "/" && regexp[strLen - 1] === "/")
     regexp = regexp.substr(1, strLen - 2);
 
-  let regexTokens = ret(regexp);
+  let regexTokens = tokenizer(regexp);
   for (let i = 0; i < n; i++) {
     result.push(generator(regexTokens));
   }
