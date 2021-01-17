@@ -114,9 +114,7 @@ const tokenizer = (regExpression) => {
   let end = start.stack;
   let groupStack = [];
 
-  const NothingToRepAtIndex = (col) => {
-    throw Error(`Nothing to repeat at ${i}.Hence Invalid expression`);
-  };
+
 
   /**
    * Iterate through each character in the regular expression.
